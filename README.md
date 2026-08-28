@@ -22,7 +22,7 @@ mka bacon
 The flashable ZIP is written to `out/target/product/hinoki/`.
 
 Use `local_manifest-pinned.xml` instead of `local_manifest.xml` when you need
-the exact revisions used for the 2026-08-27 build.
+the exact revisions used for the 2026-08-28 build.
 
 ## Device baseline
 
@@ -30,7 +30,7 @@ the exact revisions used for the 2026-08-27 build.
 - Required stock firmware baseline: `48.1.A.2.112`
 - Android: 10 / LineageOS 17.1
 - Kernel: [android_kernel_sony_mt6757](https://github.com/Kejlo523/android_kernel_sony_mt6757/tree/lineage-17.1-hinoki)
-- Build-specific kernel commit: [`ac784728`](https://github.com/Kejlo523/android_kernel_sony_mt6757/commit/ac784728)
+- Build-specific kernel commit: [`957d36ac`](https://github.com/Kejlo523/android_kernel_sony_mt6757/commit/957d36ac)
 - Google apps are not included.
 
 ## Current compatibility notes
@@ -42,6 +42,8 @@ storage, Wi-Fi, HWC and media used by the current ROM.
 - Hardware MTK video decoders are disabled because their Oreo Vcodec ABI
   crashes Android 10 media services. Android software decoders are used.
 - Screen recording uses the Android software AVC encoder.
+- MTP uses the legacy MediaTek gadget path with synchronized teardown and has
+  been verified with repeated checksum-matched transfers.
 - NFC is deliberately limited to stable NFC-A polling. Android Beam/P2P and
   the parallel NXP extension HAL are disabled to avoid controller hangs.
 - The device currently uses the primary SIM path; dual-SIM behavior remains
