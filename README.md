@@ -10,7 +10,7 @@ Start with a normal LineageOS 17.1 build environment:
 ```bash
 repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
 mkdir -p .repo/local_manifests
-curl -L https://raw.githubusercontent.com/Kejlo523/android_hinoki_manifest/main/local_manifest.xml \
+curl -L https://raw.githubusercontent.com/Ellosan/android_hinoki_manifest/main/local_manifest.xml \
     -o .repo/local_manifests/hinoki.xml
 repo sync -c -j$(nproc --all)
 
@@ -29,8 +29,8 @@ the exact revisions used for the 2026-08-28 build.
 - Device: Xperia XA1 Dual G3112
 - Required stock firmware baseline: `48.1.A.2.112`
 - Android: 10 / LineageOS 17.1
-- Kernel: [android_kernel_sony_mt6757](https://github.com/Kejlo523/android_kernel_sony_mt6757/tree/lineage-17.1-hinoki)
-- Build-specific kernel commit: [`957d36ac`](https://github.com/Kejlo523/android_kernel_sony_mt6757/commit/957d36ac)
+- Kernel: [android_kernel_sony_mt6757](https://github.com/Ellosan/android_kernel_sony_mt6757/tree/lineage-17.1-hinoki)
+- Build-specific kernel commit: [`957d36ac`](https://github.com/Ellosan/android_kernel_sony_mt6757/commit/957d36ac)
 - Google apps are not included.
 
 ## Current compatibility notes
@@ -57,3 +57,5 @@ welcome.
 
 Based on the original SonyMTKDev hinoki, MT6757 common, vendor and kernel trees,
 with LineageOS as the Android base.
+
+Forked from [Kejlo523's hinoki port](https://github.com/Kejlo523/android_hinoki_manifest).
