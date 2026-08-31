@@ -21,6 +21,19 @@ mka bacon
 
 The flashable ZIP is written to `out/target/product/hinoki/`.
 
+### In GitHub Codespaces
+
+A `.devcontainer/` is included, and `devcontainer.json` requires a 16-core /
+128GB machine so Codespaces only offers a tier that can hold the tree.
+
+That is enough for `mka recoveryimage`, which is the useful case. A full
+`mka bacon` needs roughly 155GB of source plus build output and will run out
+of disk, so build the full ROM somewhere with more storage.
+
+Note also that a codespace stops on idle (240 minutes maximum, set per user or
+organisation, not in this repo), and that timer is based on your connection
+rather than on CPU activity -- `tmux` will not keep a long build alive.
+
 Use `local_manifest-pinned.xml` instead of `local_manifest.xml` when you need
 the exact revisions used for the 2026-08-28 build.
 
